@@ -12,7 +12,7 @@ client = genai.Client(api_key=gemini_api_key)
 
 MODEL = "gemini-3.1-flash-lite"
 
-st.write("Press the button to say hello")
+st.write("Press the button to know who was born today")
 if st.button("Press me!"):
-    st.write(client.models.generate_content(model=MODEL, contents="Say hello in five words.").text)
+    st.write(client.models.generate_content(model=MODEL, contents="Tell me someone who was born in the same day as today").text)
 
